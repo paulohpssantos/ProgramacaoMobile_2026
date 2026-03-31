@@ -13,12 +13,12 @@
         android:textSize="30dp"
         android:gravity="center"/>
 
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAlunos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:id="@+id/rvAlunos"/>
-
+        android:layout_weight="2" />
 
     <Button
         android:layout_width="match_parent"
