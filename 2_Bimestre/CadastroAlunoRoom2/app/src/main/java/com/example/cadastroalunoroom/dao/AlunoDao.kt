@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.cadastroalunoroom.entity.AlunoEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface AlunoDao {
@@ -13,5 +14,5 @@ interface AlunoDao {
     suspend fun inserir(aluno: AlunoEntity)
 
     @Query("SELECT * FROM aluno ORDER BY nome ASC")
-    suspend fun listarTodos(): List<AlunoEntity>
+    fun listarTodos(): Flow<List<AlunoEntity>>
 }
